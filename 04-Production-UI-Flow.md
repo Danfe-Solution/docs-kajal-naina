@@ -175,7 +175,7 @@ graph TD
 
 | Action | Org Admin | Internal Finance | Store Manager | Sales Team |
 |---|---|---|---|---|
-| View Production Formulas | ✅ | ✅ | ✅ | ❌ |
+| View Production Formulas | ✅ | ✅ | ✅ | ✅ |
 | Create/Edit Production Formulas | ✅ | ✅ | ✅ | ❌ |
 | Run Production *(new)* | ✅ | ✅ | ✅ | ❌ |
 | Configure Gold/Silver Conversion Ratios *(new)* | ✅ | ✅ | ❌ | ❌ |
