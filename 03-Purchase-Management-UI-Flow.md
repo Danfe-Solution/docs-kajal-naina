@@ -17,6 +17,7 @@
 - Each purchase must be able to mark whether **VAT is applied**, and separately, whether that VAT is **claimable** (i.e., can be used as an input tax credit).
 - A **single Batch Number is generated per Purchase Reference** — every raw material line item bought under the same purchase bill shares that one batch number (this is different from giving each line item its own separate batch number).
 - The business does **buy-back** — repurchasing a previously sold item at a percentage deduction.
+- The business can buy items/product from individuals/supplier.
 
 ---
 
