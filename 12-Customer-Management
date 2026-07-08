@@ -1,0 +1,143 @@
+# CountIt — Customer Management: UI Flow & Behavior
+
+**Purpose of this document:** Show how customer records are captured and used — personal and billing/shipping details, loyalty and customer level, purchase history — so the client can confirm the field set matches what's actually collected in the shop, and flag a couple of places where the client's own reference sheet doesn't quite match the spec text.
+
+---
+## 1. What the Spec Requires
+
+- Customer details: **Name, Contact Person, Phone Number, Email, Address, Date of Birth, Anniversary Date, Billing Address, Shipping Address, Multiple Mobile Numbers, Citizenship Number.**
+- Sales transactions are linked to the respective customer, and **purchase history is maintained.**
+- Billing information specifically includes: Street Address, City, State, Postal/Pin Code, Country, Email Address, Primary and Secondary Mobile Numbers, **or** Company Name / Position-Designation (for a business customer).
+- **Billing and Shipping addresses can be different.**
+- Customers can have **loyalty points**, calculated on configurable business rules.
+- Customers carry a **Customer Level** (e.g. Platinum, Gold, Silver) based on business rules.
+- The system maintains customer **social media profiles** (Instagram, Facebook, TikTok) where applicable.
+
+---
+## 3. Step-by-Step UI Flow
+
+```mermaid
+graph TD
+    A[Sidebar: Customers] --> B[Customer List]
+    B --> C[Add Customer]
+    C --> D[Enter Personal Details: Name, DoB, Anniversary, Citizenship No.]
+    D --> E[Enter Billing Address and Contact Info]
+    E --> F{Shipping Same as Billing?}
+    F -->|Yes| G[Copy Billing to Shipping]
+    F -->|No| H[Enter Shipping Address Separately]
+    G --> I[Optional: Company Name and Position for Business Customers]
+    H --> I
+    I --> J[Assign Customer Level       Gold, Platinum, Silver]
+    J --> K[Save Customer]
+    K --> L[Customer Detail: Purchase History, Loyalty Points, Notes, Socials]
+    L --> M[Click a Purchase History Row]
+    M --> N[Open Sales / Invoice Detail: Line Items, Composition, Tax, Payment Status]
+    L --> O[Click a Return / Exchange Row, if Any]
+    O --> P[Open Sales Return Detail: Return or Exchange Fee, Linked Invoice]
+```
+
+### Walkthrough in plain language
+
+1. **Customer List (`/customers`)** — searchable table of every customer: Name, Phone, Customer Level, Lifetime Spend.
+2. **+ Add Customer** — opens Customer Create.
+3. **Personal details first** — Name, Date of Birth, Anniversary Date, Citizenship Number (see Section 6 for a flag on this field).
+4. **Billing address and contact info** — Street Address, City, State, Pin Code, Country, primary and secondary mobile numbers, and email.
+5. **Shipping address** — a toggle to reuse the billing address, or enter a separate one, per the client's own reference sheet noting shipping "might be same as billing, or will have to manually choose, then input separately."
+6. **Optional business-customer fields** — Company Name and Position/Designation, for customers who are buying on behalf of a business rather than as an individual.
+7. **Assign a Customer Level** (Section 5 flags a discrepancy on what the actual tier names should be).
+8. **Save.** The Customer Detail screen then shows purchase history, loyalty points, notes, and social media handles as they accumulate over time.
+9. **Click into any Purchase History row** to open the full **Sales/Invoice Detail** screen for that transaction — line items, composition breakdown, tax/discount math, and payment status, as described in the Sales Management document.
+10. **Click into any Return/Exchange row**, if the customer has one, to open the full **Sales Return Detail** screen — return or exchange fee, item condition, and the link back to the original invoice, as described in the Sales Return document.
+
+---
+
+## 4. Full Field Set
+
+| Field                                                   | Source       | Notes                                                                                                                             |
+| ------------------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| Cust ID                                                 | Sheet        | System-generated                                                                                                                  |
+| First / Middle / Last Name                              | Spec + Sheet |                                                                                                                                   |
+| Date of Birth                                           | Spec + Sheet |                                                                                                                                   |
+| Anniversary Date                                        | Spec + Sheet |                                                                                                                                   |
+| Billing Street Address, City, State, Pin Code, Country  | Spec + Sheet |                                                                                                                                   |
+| Billing Mobile Number 1 & 2                             | Sheet        | Matches spec's "Multiple Mobile Numbers"                                                                                          |
+| Shipping Street Address, City, State, Pin Code, Country | Spec + Sheet | Can copy from Billing, or entered separately                                                                                      |
+| Shipping Email                                          | Sheet        | See Section 7 — Billing has no equivalent Email field in the sheet                                                                |
+| Shipping Mobile Number 1 & 2                            | Sheet        |                                                                                                                                   |
+| Social Media (Instagram, Facebook, TikTok)              | Spec + Sheet | Sheet lists this as three separate entries                                                                                        |
+| Customer Level                                          | Spec + Sheet | See Section 5 — tier names differ between spec and sheet                                                                          |
+| Company Name / Position                                 | Spec + Sheet | For business customers                                                                                                            |
+| Customer Notes                                          | Sheet        | Free text                                                                                                                         |
+| Loyalty Points                                          | Spec + Sheet | See Section 6 — calculation method still undefined                                                                                |
+| Purchase Frequency                                      | Sheet        | Feeds the Customer Report                                                                                                         |
+| Lifetime Spend                                          | Sheet        | Feeds the Customer Report                                                                                                         |
+| Contact Person                                          | Spec only    | Likely applies to the business-customer block (Company Name/Position), not an individual customer — not explicit in either source |
+
+---
+
+## 5. Customer Level — Needs Clarification
+
+The **spec text** names the tiers as **Platinum, Gold, Silver.** The client's own **`Customer_Database` sheet** names them as **Platinum, Gold, VIP, Regular** instead.
+
+> **Flagging, not resolving:** these are two different tier sets from two different sources. Neither is assumed correct — **confirm with the client which tier names are actually in use** before this becomes a hardcoded dropdown list.
+
+---
+
+## 6. Loyalty Points — Calculation Method Still Open
+
+Both the spec and the client's own reference sheet agree loyalty points should exist and be based on "configurable business rules" — but the sheet itself notes, in the client's own words, that the team still **"need[s] to make a system of how this is calculated."**
+
+### Need Clarifiication and decision from client
+**Below are three common approaches to calculating loyalty points for consideration:**
+
+*   **1. The Flat Spend-to-Point Ratio 
+    *   **How it works:** Points are awarded at a strict, fixed rate based on the total invoice value. For example, the XYZ Supermarket system awards 1 reward point for every NPR 500 spent on standard-priced products. These points accumulate and can be converted to voucher values once a minimum threshold (e.g., 200 points) is met.
+    *   **Pros:** Simplest to develop; completely transparent and easy for customers to understand.
+    *   **Cons:** Does not protect margins on low-margin items, which is risky for raw gold and silver transactions.
+
+*   **2. The Product Category / Margin-Based Method**
+    *   **How it works:** The point earning rate varies depending on *what* is being bought. For instance, high-margin finished goods, diamonds, or pearls might earn 1 point per NPR (1000) or any number spent, whereas labor/wages or raw metal weight (which fluctuate daily) earn exactly zero points.
+    *   **Pros:** Highly protective of the business's bottom line, which is critical in the jewellery industry where raw metal margins are tight.
+    *   **Cons:** More complex to build; requires mapping point rules directly to the product attribute blocks in the backend.
+
+*   **3. The Tier-Based Multiplier (Customer Level Method)**
+    *   **How it works:** The point earning rate is tied directly to the Customer Level (Platinum, Gold, VIP, Regular). A Regular customer might earn 1 point per NPR 1,000 spent, while a Platinum customer earns a 2x or 3x multiplier for the exact same spend.
+    *   **Pros:** Gamifies the shopping experience and heavily incentivizes customers to consolidate their purchases to reach higher VIP tiers.
+    *   **Cons:** Creates a hard dependency between the Customer Management tier logic and the Sales point-calculation logic.
+
+> **Needs a decision:** Which of these three calculation models should be used This is a genuinely open business-rules question, not just a UI question, and should be confirmed before the points-earning logic is built (the field to store/display the running point balance can be built either way).
+
+
+---
+
+## 8. Purchase History & Reporting Fields
+
+Every sale a customer makes links back to their record (per Sales Management), which is what populates:
+
+- **Purchase History** — a running list of past invoices, viewable from Customer Detail.
+- **Purchase Frequency** and **Lifetime Spend** — both explicitly noted in the client's sheet as feeding the Customer Report (see the future Reports module document).
+
+**Drill-down behavior:** Purchase History isn't just a static summary — each row is clickable and opens that transaction's own full detail screen:
+
+|From Customer Detail|Opens|
+|---|---|
+|Click a Purchase History row|The full **Sales/Invoice Detail** screen for that sale (line items, composition breakdown, batch sold from, discount/tax math, advance payment, delivery status) — as described in the Sales Management document|
+|Click a Return/Exchange row|The full **Sales Return Detail** screen for that transaction (return or exchange fee, item condition, linked original invoice) — as described in the Sales Return document|
+
+This keeps Customer Detail as a clean index of everything tied to that customer, while each transaction's full detail — including anything that shouldn't be visible to every role — lives on its own screen, governed by that screen's own role visibility rules. (Note: unlike Supplier, Sales/Invoice Detail is already visible to Sales Team per the Sales Management role table, so there's no extra restriction introduced by drilling in from Customer Detail.)
+
+---
+
+## 9. Role Visibility
+
+|Action|Org Admin|Internal Finance|Store Manager|Sales Team|
+|---|---|---|---|---|
+|View Customer List/Detail|✅|✅|✅|✅|
+|Create/Edit Customer|✅|✅|✅|✅|
+|View Lifetime Spend / Purchase History|✅|✅|✅|✅|
+|Deactivate Customer|✅|✅|❌|❌|
+
+> Sales Team and Store Manager are given create/edit access here since customer capture typically happens at the point of sale, on the shop floor — unlike Purchase-side data, this isn't cost-sensitive information, so the usual purchase-price restriction doesn't apply to this module.
+
+---
+
