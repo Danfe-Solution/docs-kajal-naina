@@ -9,7 +9,7 @@
 ## 1. What the Spec Requires (Baseline)
 
 - Every product needs a **unique SKU** and a set of **attributes**.
-- **Different SKU logic** for Virtual vs. Physical, and Raw Material vs. Finished Good.
+- **Different SKU logic** 
 - Every product marks **Taxable / Not Taxable**, with a **Tax %**.
 - Every product marks **Discount Applicable (Yes/No)**.
 - Attributes are not one flat list — they break down into **Pearl, Metal (Gold/Silver), and Stone** detail blocks, each with its own fields. See Section 2.8 for the full model.
