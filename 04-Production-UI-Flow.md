@@ -195,7 +195,4 @@ graph TD
 - Confirm whether the Import SKU description under "Metal Details" should really pull Stone Type/Clarity, or whether that was a copy/paste artifact and it should instead pull Color/Karat/Weight. (Section 8)
 - Should the screens currently labeled "Recipe" in the codebase be renamed to "Production Formula" (or another term the client prefers) as part of this build?
 
----
 
-**Document status:** Ready for client walkthrough.
-**Next step:** Confirm the five open items above, then build Production Execution — the largest missing piece in the application, since it touches inventory, batching, gold/silver conversion math, and accounting all at once.
