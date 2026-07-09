@@ -36,20 +36,7 @@ This single idea drives everything else in this document: Production is not an o
 
 ---
 
-## 3. Screens Involved
-
-| Screen | Purpose | Status |
-|---|---|---|
-| Production Formula List | Defines, for one finished product, exactly which raw materials and quantities are required to make one unit | 🟡 Exists in the codebase today (currently labeled using a restaurant-style "Recipe" naming — see note below), but only the definition side works |
-| Production Formula Create/Edit | Create or edit a formula | 🟡 Same as above |
-| Production Formula Detail | View a single formula | 🟡 Same as above |
-| **Production Execution** | Actually run a production job: consume raw materials, apply gold/silver conversion if needed, create the finished-goods batch | ⚫ Does not exist yet — this is the missing piece |
-
-> **Naming note for the client:** the existing screens are currently named "Recipe" in the codebase (`/receipe-management`) — a term carried over from the generic food/restaurant system this app was originally built from. Since CountIt is a jewellery manufacturing workflow, not a kitchen, these should be renamed to something like **"Production Formula"** or **"Bill of Materials."** This is a labeling fix, not a logic change — flagging it here so it gets corrected during implementation.
-
----
-
-## 4. Gold Conversion — The Actual Ratios in Use
+## 3. Gold Conversion — The Actual Ratios in Use
 
 Gold is rarely used at 24 karat purity in finished jewellery. Lower-karat gold is made by adding alloy (copper and other metals) to pure gold. These are the client's confirmed ratios:
 
@@ -73,7 +60,7 @@ The client's reference sheet also calculates the reverse: given a weight of 9K, 
 
 ---
 
-## 5. Silver Conversion
+## 4. Silver Conversion
 
 Silver has its own purity standards, separate from gold:
 
@@ -86,7 +73,7 @@ Silver Ware and any silver components in other categories (Mangalsutra, Necklace
 
 ---
 
-## 6. Loss / Wastage (Jarti)
+## 5. Loss / Wastage (Jarti)
 
 The client's process includes a **6% loss allowance ("Jarti")** applied to gold and silver during production — accounting for material lost in the process of working, melting, or shaping the metal.
 
@@ -94,7 +81,7 @@ The client's process includes a **6% loss allowance ("Jarti")** applied to gold 
 
 ---
 
-## 7. Alloy Accounting & Making Charge
+## 6. Alloy Accounting & Making Charge
 
 Two more cost/material elements are part of every production job, per the client's process:
 
@@ -105,7 +92,7 @@ Two more cost/material elements are part of every production job, per the client
 
 ---
 
-## 8. Raw Material Types & the Import SKU (IMP_SKU)
+## 7. Raw Material Types & the Import SKU (IMP_SKU)
 
 Raw materials purchased for production fall into three types, each tracked with its own **Import SKU (IMP_SKU)** — a code assigned at the time of purchase that auto-fills the material's details wherever it's used, so production doesn't require re-typing the same attributes.
 
@@ -125,7 +112,7 @@ Raw materials purchased for production fall into three types, each tracked with 
 
 ---
 
-## 9. Step-by-Step UI Flow (Target Design — To Be Built)
+## 8. Step-by-Step UI Flow (Target Design — To Be Built)
 
 ```mermaid
 graph TD
@@ -169,7 +156,7 @@ graph TD
 
 ---
 
-## 10. Role Visibility
+## 9. Role Visibility
 
 | Action | Org Admin | Internal Finance | Store Manager | Sales Team |
 |---|---|---|---|---|
@@ -180,7 +167,7 @@ graph TD
 
 ---
 
-## 11. What's Confirmed vs. What Needs the Client's Answer
+## 10. What's Confirmed vs. What Needs the Client's Answer
 
 **Confirmed and working today:** defining a production formula (what raw materials + quantities make one finished unit).
 
