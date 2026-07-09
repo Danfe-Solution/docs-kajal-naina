@@ -2,8 +2,6 @@
 
 **Purpose of this document:** Show how raw materials (pearls, gold, silver, stones) become finished jewellery in CountIt — the production formula that defines what goes into one unit, the screen that actually runs a production job, and the gold/silver conversion math behind it. Meant to be walked through with the client to confirm this matches the actual workshop process before it's built.
 
-**Source verified against:** CountIt Backend Specification (Production section) and the client's own gold/silver conversion reference sheet.
-
 ---
 
 ## 1. The Core Idea: Raw Materials In, Finished Goods Out
