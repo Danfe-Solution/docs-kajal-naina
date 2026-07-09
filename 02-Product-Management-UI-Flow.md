@@ -208,7 +208,3 @@ This is covered in full in the **Purchase Management** document (Section 6, "Sam
 - Does the Import SKU description under "Metal" really pull Stone Type/Clarity, or should it pull Color/Karat/Weight as its own fields suggest? (Section 2.8 — same question raised in the Production document)
 - Same raw material, different attribute at purchase time — see the dedicated question in the Purchase Management document (Section 6).
 
----
-
-**Document status:** Ready for client walkthrough.
-**Next step:** Build Attribute Management first (Section 2.8), since Category Setup and Product Create both depend on it.
