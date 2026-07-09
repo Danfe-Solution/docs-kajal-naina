@@ -20,20 +20,7 @@
 - The business can buy items/product from individuals/supplier.
 
 ---
-
-## 2. Screens That Exist Today
-
-| Screen | Route | Status |
-|---|---|---|
-| Purchase List | `/purchase` | 🟡 Working, no landed-cost breakdown visible yet |
-| Purchase Create/Edit | `/purchase/create` | 🟡 Basic line items work; charges, currency, VAT-claimable, and batch logic below still need to be added |
-| Purchase Detail | `/purchase/detail/:id` | ✅ Working |
-| Purchase Return List / Create / Detail | `/purchase-returns` | ✅ Working |
-| Supplier List / Detail | `/suppliers` | ✅ Working — every purchase is linked here |
-
----
-
-## 3. Step-by-Step UI Flow
+## 2. Step-by-Step UI Flow
 
 ```mermaid
 graph TD
@@ -73,7 +60,7 @@ graph TD
 
 ---
 
-## 4. Additional Charges — Detail
+## 3. Additional Charges — Detail
 
 | Charge Type | Entered As | Distributed To Items? |
 |---|---|---|
@@ -88,7 +75,7 @@ Each item's final **landed cost** = its own purchase rate + its proportional sha
 
 ---
 
-## 5. Batch Number Logic — Why This Matters
+## 4. Batch Number Logic — Why This Matters
 
 **Old assumption (corrected):** each product line item gets its own unique batch number.
 **Correct behavior:** the **Purchase Reference itself** generates **one** batch number, and every product bought under that reference shares it.
@@ -97,7 +84,7 @@ Each item's final **landed cost** = its own purchase rate + its proportional sha
 
 ---
 
-## 6. Same Raw Material, Different Attributes — Needs Client Clarification
+## 5. Same Raw Material, Different Attributes — Needs Client Clarification
 
 **The scenario:** the business buys the same raw material type again (e.g., pearls of roughly the same kind), but this shipment's actual attribute values are slightly different from the last one (a different shade, size, or quality grade).
 
@@ -113,7 +100,7 @@ Each item's final **landed cost** = its own purchase rate + its proportional sha
 
 ---
 
-## 7. Buy-Back
+## 6. Buy-Back
 
 Buy-back is repurchasing an item already sold to a customer, at a deduction from the original price.
 
@@ -125,7 +112,7 @@ Buy-back is repurchasing an item already sold to a customer, at a deduction from
 
 ---
 
-## 8. Role Visibility
+## 7. Role Visibility
 
 | Action | Org Admin | Internal Finance | Store Manager | Sales Team |
 |---|---|---|---|---|
@@ -136,16 +123,7 @@ Buy-back is repurchasing an item already sold to a customer, at a deduction from
 | Create Purchase Return | ✅ | ✅ | ❌ | ❌ |
 | Record Supplier Payment | ✅ | ✅ | ❌ | ❌ |
 
----
 
-## 9. What's Confirmed vs. What Needs the Client's Answer
-
-**Confirmed and working today:** supplier selection, per-line rate entry, purchase returns (with and without a bill reference).
-
-**Needs a decision:**
-- Same raw material, different attribute at purchase time — see Section 6 (recommend confirming Approach B, consistent with the Production document's Import SKU model).
-- Buy-back: purchase-side flow or sales-return-side flow? (Section 7)
-- Will "VAT Claimable" ever need to be a partial percentage (e.g., only 50% claimable) rather than a strict Yes/No?
 
 ---
 
