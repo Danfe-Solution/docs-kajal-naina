@@ -16,18 +16,7 @@
 
 ---
 
-## 2. Screens Involved
-
-|Screen|Route (proposed)|Status|
-|---|---|---|
-|Sales / Invoice List|`/sales`|⚠️ Not verified this session — confirm against frontend audit|
-|Sales Create (New Sale)|`/sales/create`|⚠️ Not verified this session|
-|Sales Detail|`/sales/detail/:id`|⚠️ Not verified this session|
-|Customer Quick-Add (from within Sales Create)|(modal, no separate route expected)|⚠️ Not verified this session|
-
----
-
-## 3. Step-by-Step UI Flow
+## 2. Step-by-Step UI Flow
 
 ```mermaid
 graph TD
@@ -64,7 +53,7 @@ graph TD
 
 ---
 
-## 4. Composition Display — "What Is This Made Of"
+## 3. Composition Display — "What Is This Made Of"
 
 Per spec, a sales person must be able to show a customer what a piece actually contains. This mirrors the same Pearl/Metal/Stone attribute blocks used everywhere else, but as a **read-only, customer-facing display** rather than an entry form:
 
@@ -80,7 +69,7 @@ A finished product typically pulls from more than one block at once (e.g. a pear
 
 ---
 
-## 5. Batch Selection & Inventory Deduction
+## 4. Batch Selection & Inventory Deduction
 
 Every sale must draw from a specific, identifiable batch in inventory — never a generic "SKU has X units available." This is what lets a customer's purchase (and any later return) trace back to the exact physical item and its attributes.
 
@@ -89,7 +78,7 @@ Every sale must draw from a specific, identifiable batch in inventory — never 
 
 ---
 
-## 6. Discount & Tax Rules
+## 5. Discount & Tax Rules
 
 |Rule|Applies To|Rate|
 |---|---|---|
@@ -102,13 +91,13 @@ These figures come directly from the client's own billing reference and match th
 
 ---
 
-## 7. Cost/Price Visibility Rule
+## 6. Cost/Price Visibility Rule
 
 Consistent with the hard rule established in User Management and carried through every module since: **Sales Team must never see a product's purchase/cost price**, anywhere in the Sales flow — product search results, the line item, or the invoice total breakdown. Only the customer-facing selling price and the calculated tax/discount are visible to this role.
 
 ---
 
-## 8. Customer Notes
+## 7. Customer Notes
 
 A free-text note field, tied to the customer record (or to the specific invoice — see open question below), for things like sizing requests, gifting occasions, or preferences the sales team wants remembered for next time.
 
@@ -116,13 +105,13 @@ A free-text note field, tied to the customer record (or to the specific invoice 
 
 ---
 
-## 9. Backorder Trigger
+## 8. Backorder Trigger
 
 If a product isn't currently in stock, the sales person can create a Backorder directly from this screen instead of completing a normal sale line. A Backorder is linked to the original sales invoice, records the customer's required delivery date and an expected completion date, and indicates whether the item will be produced in Nepal or Hong Kong. Full Backorder Management behavior (statuses, reporting) belongs to its own module document — this document only covers the fact that Sales is where a backorder gets triggered.
 
 ---
 
-## 10. Role Visibility
+## 9. Role Visibility
 
 | Action                     | Org Admin | Internal Finance | Store Manager | Sales Team |
 | -------------------------- | --------- | ---------------- | ------------- | ---------- |
@@ -134,14 +123,3 @@ If a product isn't currently in stock, the sales person can create a Backorder d
 | Apply Discount             | ✅         | ✅                | ✅             | ✅          |
 | Create Backorder           | ✅         | ✅                | ✅             | ✅          |
 
----
-
-## 11. What's Confirmed vs. What Needs the Client's Answer
-
-**Confirmed:** composition display for every sale line; batch-level deduction from inventory; cost price hidden from Sales Team/Store Manager; discount restricted to Pearl/Stone/Wages, applied before tax; VAT 13% on Pearl/Stone, Labour Tax 1.5% on Gold.
-
-**Needs a decision:**
-
-- Combo Product composition display — full breakdown or bundle-level only? (Section 4)
-- Automatic (FIFO) vs. always-manual batch selection (Section 5)
-- Customer Notes — per customer profile, per invoice, or both (Section 8)
