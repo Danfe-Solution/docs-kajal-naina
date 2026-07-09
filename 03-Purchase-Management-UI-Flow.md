@@ -123,9 +123,3 @@ Buy-back is repurchasing an item already sold to a customer, at a deduction from
 | Create Purchase Return | ✅ | ✅ | ❌ | ❌ |
 | Record Supplier Payment | ✅ | ✅ | ❌ | ❌ |
 
-
-
----
-
-**Document status:** Ready for client walkthrough.
-**Next step:** Confirm Section 6 (same raw material, different attributes) first — it affects this form, the Product Management attribute model, and Production's Import SKU logic — then build the additional-charges and batch-number logic described above into the existing Purchase Create screen.
