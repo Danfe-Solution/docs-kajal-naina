@@ -73,7 +73,8 @@ A product can be marked as a Combo with a simple Yes/No toggle, used when the it
 | Print Barcode | Yes | Yes | Yes | No |  
 ## Product Management Overview  
   
-  ![[Pasted image 20260712170205.png]]
+<img width="975" height="566" alt="image" src="https://github.com/user-attachments/assets/2ed10385-437d-41de-9f84-cb72a5e8b4f4" />
+
 ## 2. Purchase Management  
   
 Purchase Management is how raw material — Pearl, Metal, or Stone — is bought from a supplier. It can also record a Buy-Back, which is when a finished item already sold to a customer is repurchased back from them at a reduced value.  
@@ -108,7 +109,8 @@ Once saved, a supplier payment can be recorded, or a purchase return created if 
 | Record Supplier Payment | Yes | Yes | No | No |  
 ## Purchase Management Overview  
   
-  ![[Pasted image 20260712170523.png]]
+<img width="975" height="517" alt="image" src="https://github.com/user-attachments/assets/b70c5c95-b321-4612-8610-17034601b26e" />
+
 ## 3. Purchase Return  
   
 A Purchase Return is created whenever stock is sent back to a supplier — with or without the original purchase bill. With a bill, the supplier and the return amount are auto-suggested from that purchase; without one, both are entered manually.  
@@ -123,9 +125,9 @@ Either way, the returned quantity is deducted from the same batch the stock orig
 | Batch    | Selected from the bill's line items | Entered manually  |     |
 | Amount   | Auto-suggested from the purchase    | Entered manually  |     |
 ## Purchase Return Overview  
-![[Pasted image 20260712170611.png]]
-## Role Overview  
+<img width="856" height="506" alt="image" src="https://github.com/user-attachments/assets/1bccbde5-a809-4227-9b2a-9381298fdebe" />
 
+## Role Overview  
   
 | Action | Org Admin | Internal Finance | Store Manager | Sales Team |  
 | --- | --- | --- | --- | --- |  
@@ -148,7 +150,8 @@ Running a job decreases the exact raw-material batches consumed and creates a ne
   
 Both run through the same steps: if a formula needs a karat/purity batch that doesn't exist yet, the user runs the matching Karat Conversion Formula first, then returns to run the original formula. Every run also records a manually entered Loss ("Jarti") figure and a Making Charge, and automatically posts an accounting voucher once executed.  
 ## Production Overview  
-![[Pasted image 20260712170712.png]]
+<img width="959" height="567" alt="image" src="https://github.com/user-attachments/assets/8c8d1805-18e3-4078-b9cb-5703b1da05b6" />
+
 ## Role Overview  
 | Action                                    | Org Admin | Internal Finance | Store Manager | Sales Team |
 | ----------------------------------------- | --------- | ---------------- | ------------- | ---------- |
@@ -183,8 +186,8 @@ Every batch belongs to exactly one warehouse or outlet at a time. Stock can be s
 | View Batch Transaction History | Yes | Yes | Yes | No |  
 | Filter by Warehouse | Yes | Yes | Yes | Yes |  
 ## Inventory Management Overview  
-  ![[Pasted image 20260712170811.png]]
-  
+<img width="975" height="520" alt="image" src="https://github.com/user-attachments/assets/a50cf29f-29e7-470f-b11c-d525ca6cd971" />
+
 ## 6. Sales & Billing  
   
 This is where a sale actually happens — from choosing a customer to generating the final invoice. It brings together product lookup, batch-level stock selection, automatic discount and tax calculation, advance payments, and delivery tracking.  
@@ -223,9 +226,8 @@ This is where a sale actually happens — from choosing a customer to generating
 | Mark as Delivered | Yes | Yes | Yes | No |  
 | View Client Dues Report | Yes | Yes | Yes | Yes |  
 ## Sales & Billing Overview  
-  ![[Pasted image 20260712171104.png]]
-## Sales Billing Single Sale to Invoice Flow  
-  
+<img width="870" height="623" alt="image" src="https://github.com/user-attachments/assets/e37f5baf-d2d9-4313-b70e-f355b96310b9" />
+
 ## 7. Sales Return  
   Sales Return covers both a plain customer return and a product exchange. Returned items are added back to inventory after validation, and every return or exchange stays linked to the original sales invoice, so its history is fully traceable.  
 ## Return vs. Exchange Fee  
@@ -236,7 +238,8 @@ This is where a sale actually happens — from choosing a customer to generating
 | Exchange | 12% | Deducted from the exchanged item's value; remainder becomes part- payment on the new item |  
   On an exchange, the transaction also carries a note referencing the original invoice, so it is clear at a glance that this is an exchange and not a fresh sale.  
 ## Sales Return Overview  
-![[Pasted image 20260712171201.png]]
+<img width="959" height="567" alt="image" src="https://github.com/user-attachments/assets/329731c8-36c3-4e1a-9f46-a3c13d84077d" />
+
 ## Role Overview  
   
 | Action | Org Admin | Internal Finance | Store Manager | Sales Team |  
