@@ -25,7 +25,8 @@ In plain terms, this system exists to:
   
 Every user lands on a Dashboard right after logging in — but the dashboard and the sidebar menu are both generated per role, not shared. Org Admin, Internal Finance, Store Manager, and Sales Team each see a different set of widgets and a different menu, built around what that role actually needs to do.  
   
-  ![[Pasted image 20260712170109.png]]
+<img width="1064" height="584" alt="image" src="https://github.com/user-attachments/assets/9d97a2c6-4d41-4fdf-b0e5-ecddc2bfcdfd" />
+
  
 ## The Four Roles  
   
