@@ -247,3 +247,42 @@ This is where a sale actually happens — from choosing a customer to generating
 | View Sales Returns / Exchanges | Yes | Yes | Yes | Own transactions |  
 | Create Return / Exchange | Yes | Yes | Yes | Yes |  
 | View Fee Amounts | Yes | Yes | Yes | Yes |
+
+
+## **8. Stock Adjustment**  
+  
+Stock Adjustment is for occasional tasks to check, verify, and correct mismatches between physical stock and system stock. A note, with a file attachment, covering the product SKUs and their related inventory batch numbers, is used to track and manage this.  
+  
+## **What This Module Covers**  
+  
+- Stock Adjustment is for **occasional tasks** to check, verify, and correct mismatches between **physical stock and system stock.**  
+- **Approved** returned or exchanged products should be added back to inventory with the appropriate batch number and stock quantity.  
+## **How an Adjustment Is Recorded**  
+### **Create Adjustment**  
+- Opens a form that can hold multiple product  / batch lines at once.  
+### **Enter Physical vs. System Count**  
+- For each line, enter the physical quantity counted and compare it with the system quantity.  
+### **Attach a Supporting File**  
+- Supporting files, such as photos or signed count sheets, can be attached for each discrepancy.  
+### **Add a Reason**  
+- A short explanation of the discrepancy is added alongside the file.  
+### **Submit**  
+- The Inventory  Balance Qty is adjusted per line to match the corrected figure.  
+### **Increase vs. Decrease**  
+| Variance     | Meaning                                    | Example                                                |
+| ------------ | ------------------------------------------ | ------------------------------------------------------ |
+| Positive (+) | Physical count is higher than system count | Extra stock found, previously unrecorded               |
+| Negative (−) | Physical count is lower than system count  | Shrinkage, damage, theft, miscount at an earlier stage |
+  
+Both directions post as an adjustment against the batch's Balance Qty — the memo and reason field is what distinguishes them, and both are treated the same way structurally.  
+  
+## **Stock Adjustment Overview**  
+<img width="975" height="445" alt="image" src="https://github.com/user-attachments/assets/b625311a-da86-4315-ada6-3fbae6a5c58d" />
+
+## **Role Overview**  
+  
+|**Action**|**Org Admin**|**Internal Finance**|**Store Manager**|**Sales Team**|  
+|---|---|---|---|---|  
+|View Stock Adjustments|**Yes**|**Yes**|**Yes**|**No**|  
+|Create Adjustment|**Yes**|**Yes**|**Yes**|**No**|  
+|Attach Files|**Yes**|**Yes**|**Yes**|**No**|
