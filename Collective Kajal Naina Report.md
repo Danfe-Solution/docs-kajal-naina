@@ -286,3 +286,37 @@ Both directions post as an adjustment against the batch's Balance Qty — the me
 |View Stock Adjustments|**Yes**|**Yes**|**Yes**|**No**|  
 |Create Adjustment|**Yes**|**Yes**|**Yes**|**No**|  
 |Attach Files|**Yes**|**Yes**|**Yes**|**No**|
+
+
+## **9. Opening Stock Management**  
+  Opening Stock is used to record the existing jewellery and raw material stock before the system starts being used . It t is a one-time setup performed by the **Org Admin** during the initial system setup.  
+## **What This Module Covers**  
+-  Opening Stock captures **existing stock inventory items** before proper Sales or Purchase entry begins.  
+## **How an Opening Stock Entry Is Recorded**  
+### **Choose Item/product or material**  
+- The **Org Admin** selects the materials or a finished product.  
+### **Assign Attributes**  
+- Each stock line uses the same attribute structure (Pearl, Metal, or Stone details) used throughout the system.  
+### **Enter Opening Quantity & Valuation**  
+- For each line, the current quantity and its valuation rate are entered to establish the initial inventory value.  
+### **Add As Many Lines of materials As Needed**  
+ - A single Opening Stock entry can contain multiple lines for all available raw materials and finished products.  
+### **Save**  
+- A batch number is generated, and the quantity now shows up in Inventory as this batch's Open Qty.  
+### **Raw Material vs. Finished Goods — An Important Difference From Purchase**  
+  
+- Normally, finished jewellery is created through the **Production** process by converting raw materials or from purchase of products.  
+-  **Opening Stock** is the only exception to this rule during the initial system setup.  
+-  It allows existing finished jewellery and materials to be added directly into the system.  
+- This ensures all stock already available at go-live is recorded without creating Production entries.  
+  
+## **Opening Stock Overview**  
+<img width="975" height="431" alt="image" src="https://github.com/user-attachments/assets/78ee43c1-edaa-4393-8c9f-71c29de4c473" />
+
+## **Role Overview**  
+  
+|**Action**|**Org Admin**|**Internal Finance**|**Store Manager**|**Sales Team**|  
+|---|---|---|---|---|  
+|Create Opening Stock<br>Entry|**Yes**|**No**|**No**|**No**|  
+|View Opening Stock List|**Yes**|**Yes**|**Yes**|**Yes**|  
+|Edit / Delete Existing Entry|**Yes**|**No**|**No**|**No**|
