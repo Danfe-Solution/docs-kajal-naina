@@ -349,3 +349,37 @@ Stock Transfer is how stock physically moves between outlets. It sits on top of 
 |View Transfers|**Yes**|**Yes**|**Yes**|**No**|  
 |Create / Edit Transfer|**Yes**|**Yes**|**Yes**|**No**|  
 |Confirm Receipt (if two-<br>step is adopted)|**Yes**|**Yes**|**Yes (own outlet**<br>**only)**|**No**|
+
+## **10. Supplier Management** 
+Supplier Management is where every vendor the business buys raw material from — or sells a Buy-Back to — is set up and kept on record. Once a supplier exists, every Purchase and Purchase Return raised against them stays permanently linked to that record.
+## **What This Module Covers**
+- Supplier master data: **Name, Contact Person, Phone Number, Email, Address, PAN/VAT Number.**
+- Suppliers can be **added, edited, activated, or deactivated.**
+- Every **Purchase transaction** is linked to the respective supplier.
+- Every **Purchase Return** is linked to the respective supplier.
+
+## **How a Supplier Is Set Up**
+### **Add Supplier**
+- Enter the core details — Name, Contact Person, Phone Number, Email, Address, and PAN/VAT Number (used for tax and import documentation)
+
+
+### **Save**
+- The Supplier Detail screen is created. From here on, it automatically accumulates every Purchase and Purchase Return linked to this supplier, shown as two lists on the same screen.
+
+### Transaction Detail of Supplier
+- Clicking any Purchase row opens the full Purchase Detail screen for that bill; clicking any Purchase Return row opens the full Purchase Return Detail screen — each governed by its own role visibility rules.
+
+| **4** | **Activate / Deactivate**<br><br>A status toggle is available from the list or detail screen. Deactivating a supplier hides them from the dropdown on new Purchase entries, while all their historical purchases and returns remain fully visible and untouched. |
+## **Supplier Management Overview**
+
+<img width="975" height="431" alt="image" src="https://github.com/user-attachments/assets/9d0bff17-53d2-432b-ae1c-e7d351fccd4e" />
+
+
+## **Role Overview**
+
+| **Action** | **Org Admin** | **Internal Finance** | **Store Manager** | **Sales Team** |
+| --- | --- | --- | --- | --- |
+| View Supplier List / Detail | **Yes** | **Yes** | **No** | **No** |
+| Create / Edit Supplier | **Yes** | **Yes** | **No** | **No** |
+| Activate / Deactivate Supplier | **Yes** | **Yes** | **No** | **No** |
+| View Linked Purchase / Return History | **Yes** | **Yes** | **No** | **No** |
