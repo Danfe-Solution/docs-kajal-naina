@@ -472,3 +472,47 @@ Everyone agrees loyalty points should exist and follow configurable business rul
 
 
 
+## **13. Reports**  
+  
+Reports is where all ten report types live — a single catalog that anyone can filter by date range or fiscal year, view on screen, and export.  
+## **What This Module Covers**  
+- Reports are generated based on a **selected date range** , with a **fiscal year option.**  
+- Ten report types are included, covering every module in the system.  
+  
+## **Report Catalog**  
+| Report | What It Shows |
+|---------|----------------|
+| Inventory Report | Current stock levels across all batches |
+| Purchase Report | Purchase activity over the period |
+| Sales Report | Sales activity over the period |
+| Customer Report | Purchase frequency and lifetime spend, per customer |
+| Supplier Report | Purchase and return activity, per supplier |
+| Inventory Valuation Report | Total value of stock on hand ,stock in/out |
+| Tax Report | VAT and Craftsmanship Tax collected |
+| Backorder Report | Open backorders, split by production origin |
+| Warehouse Report | Stock levels by outlet/warehouse |
+| Client Dues Report | Outstanding customer balances |
+  
+  
+  
+## **Report Overview**  
+<img width="975" height="319" alt="image" src="https://github.com/user-attachments/assets/36583eef-a97b-482f-b597-4508804e5b75" />
+
+
+  
+## **Role Overview**  
+  
+|**Report**|**Org Admin**|**Internal Finance**|**Store Manager**|**Sales Team**|  
+|---|---|---|---|---|  
+|Inventory Report|**Yes**|**Yes**|**Yes**|**No**|  
+|Purchase Report|**Yes**|**Yes**|**No**|**No**|  
+|Sales Report|**Yes**|**Yes**|**Yes**|**Yes (own sales)**|  
+|Customer Report|**Yes**|**Yes**|**Yes**|**Yes**|  
+|Supplier Report|**Yes**|**Yes**|**No**|**No**|  
+|Inventory Valuaton<br>Report|**Yes**|**Yes**|**No**|**No**|  
+|Tax Report|**Yes**|**Yes**|**No**|**No**|  
+|Backorder Report|**Yes**|**Yes**|**Yes**|**Yes**|  
+|Warehouse Report|**Yes**|**Yes**|**Yes (own outlet)**|**No**|  
+|Client Dues Report|**Yes**|**Yes**|**Yes**|**Yes**|
+
+
