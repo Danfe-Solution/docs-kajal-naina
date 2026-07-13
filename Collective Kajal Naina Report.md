@@ -515,4 +515,35 @@ Reports is where all ten report types live — a single catalog that anyone can 
 |Warehouse Report|**Yes**|**Yes**|**Yes (own outlet)**|**No**|  
 |Client Dues Report|**Yes**|**Yes**|**Yes**|**Yes**|
 
+## **14. Warehouse / Store Management**
 
+Warehouse / Store Management is where every outlet the business runs gets set up — and what makes inventory outlet-specific instead of one combined pool. Once an outlet exists, Purchase, Sales, Production, and Stock Transfer all use it to know which location is involved.
+
+## **What This Module Covers**
+
+- Outlet details: **Name, Code, Address, Phone, Manager.**
+- Once saved, an outlet becomes **selectable everywhere else in the system.**
+- Stock **splits automatically by outlet** — the same SKU can show different quantities at different locations.
+- A **Store Manager can only edit their own outlet**, not the full list.
+- Show the outlet wise stock report and the other reports
+- Two outlet screens exist: **Outlet Setup** for everyday use, and **Master Outlet** for a broader level of access.
+## **How It Works**
+### **Add an Outlet**
+- Name, code, address, phone, and manager.
+## **Save**
+- The outlet becomes selectable everywhere else in the system by the org admin.
+### **Edit
+- A Store Manager can only see, create and edit their own outlet record, not the full list.
+## **Warehouse Overview**
+
+<img width="1388" height="543" alt="image" src="https://github.com/user-attachments/assets/3931713a-651d-4bee-9f36-e7c7afa44816" />
+
+
+## **Role Overview**
+
+|Action|Org Admin|Internal Finance|Store Manager|Sales Team|
+|---|---|---|---|---|
+|View Outlet List|**Yes**|**Yes**|**Yes**|**No**|
+|Create / Edit Any Outlet|**Yes**|**No**|**No**|**No**|
+|Edit Own Outlet Only|**Yes**|**No**|**Yes**|**No**|
+|View Warehouse-Wise Report|**Yes**|**Yes**|**Yes**|**No**|
