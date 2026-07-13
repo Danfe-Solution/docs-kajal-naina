@@ -383,3 +383,53 @@ Supplier Management is where every vendor the business buys raw material from �
 | Create / Edit Supplier | **Yes** | **Yes** | **No** | **No** |
 | Activate / Deactivate Supplier | **Yes** | **Yes** | **No** | **No** |
 | View Linked Purchase / Return History | **Yes** | **Yes** | **No** | **No** |
+
+
+# **11. Tax Management**
+
+Tax Management is where VAT and Craftsmanship Tax get set up, and where the day's fluctuating gold and silver rate gets entered. Once configured, Sales Billing pulls these numbers automatically — nobody calculates tax by hand at the counter.
+
+## **What This Module Covers**
+
+- The system keeps track of which products are **taxable and non-taxable.**
+- **Pearls and Stones carry 13% VAT.**
+- **Craftsmanship (Labour) Tax is 1.5% on Gold.**
+- VAT percentage is **configurable per product.**
+- The system supports **worker/service tax, where applicable.**
+- Tax, including Craftsmanship Tax, is **calculated automatically at billing**, based on a **manually entered daily rate.**
+- All tax rates stay **configurable** for future changes.
+
+## **How Tax Gets Set Up and Applied**
+
+### **Configure the Base Rules**
+- Org Admin or Internal Finance sets VAT % on Pearl and Stone, Craftsmanship % on Gold, and any worker/service tax rules.
+
+
+### **Rates Save Immediately**
+- Once saved, these are the numbers Sales Billing will use automatically — nobody enters or calculates tax manually at the point of sale.
+
+
+### **Tax Calculates at Billing**
+- VAT (on Pearl/Stone) and Craftsmanship Tax (on Gold) calculate automatically against whichever rate and percentage are currently active.
+
+
+## **How This Connects to Product Management**
+
+Product Management already lets an individual product carry its own tax rate, overriding its category's default. Tax Management is where those defaults — 13% VAT, 1.5% Craftsmanship — are centrally set; Product Management is just where a specific product can be flagged as an exception if it genuinely needs a different rate.
+
+## **Tax Flow Overview**
+<img width="1005" height="400" alt="image" src="https://github.com/user-attachments/assets/76f99f65-6325-419b-84df-7e59c1af76b1" />
+
+
+## **Role Overview**
+
+| **Action** | **Org Admin** | **Internal Finance** | **Store Manager** | **Sales Team** |
+| --- | --- | --- | --- | --- |
+| View Tax Configuration | **Yes** | **Yes** | **No** | **No** |
+| --- | --- | --- | --- | --- |
+| Edit Tax % / Rules | **Yes** | **Yes** | **No** | **No** |
+| --- | --- | --- | --- | --- |
+| Enter Daily Rate | **Yes** | **Yes** | **No** | **No** |
+| --- | --- | --- | --- | --- |
+| See Tax on an Invoice (result only) | **Yes** | **Yes** | **Yes** | **Yes** |
+| --- | --- | --- | --- | --- |
