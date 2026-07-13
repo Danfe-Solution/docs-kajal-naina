@@ -433,3 +433,42 @@ Product Management already lets an individual product carry its own tax rate, ov
 | --- | --- | --- | --- | --- |
 | See Tax on an Invoice (result only) | **Yes** | **Yes** | **Yes** | **Yes** |
 | --- | --- | --- | --- | --- |
+
+
+## **12. Customer Management**  
+  
+Customer Management is where every customer record is captured and used — personal details, billing and shipping information, loyalty points, and a Customer Level tier. Every sale a customer makes links back to their record, which is what builds their purchase history, feeds loyalty points, and powers the Customer Report.  
+  
+## **What This Module Covers**  
+  
+- Customer details: **Name, Contact Person, Phone Number, Email, Address, Date of Birth, Anniversary Date, Billing Address, Shipping Address, multiple mobile numbers, Citizenship Number.**  
+- Sales transactions link to the customer, and **purchase history is kept.**  
+- Billing details: Street Address, City, State, Postal/Pin Code, Country, Email, primary and secondary mobile numbers — or a **Company Name / Position** for a business customer.  
+- **Billing and Shipping addresses can be different.**  
+- Customers earn **loyalty points** , based on rules the business can configure.  
+- Customers carry a **Customer Level** (e.g. Platinum, Gold, Silver).  
+- The system keeps customer **social media handles** — Instagram, Facebook, TikTok — where relevant.  
+## **How a Customer Is Set Up**  
+  
+## **Personal Details
+- Name, Date of Birth, Anniversary Date, and Citizenship Number are entered first. **Billing Address & Contact 2** Street Address, City, State, Pin Code, Country, primary and secondary mobile numbers, and email.  
+## **Shipping Address**  
+* A toggle to copy the billing address, or type in a different one — shipping doesn't have to match billing.  
+## **Business Customer Fields (Optional)**  
+  - Company Name and Position/Designation, for a customer buying on behalf of a business rather than as an individual.  
+  
+**Assign a Customer Level & Save 5** A tier is assigned and the record is saved. From here, the Customer Detail page fills in on its own — purchase history, loyalty points, notes, and social handles, as they happen over time.  
+##  Question — How Loyalty Points Are Calculated**  
+  
+Everyone agrees loyalty points should exist and follow configurable business rules — but exactly how points are earned still needs to be decided. Three common approaches:  
+### **Flat Spend-to-Point Ratio**  
+- A fixed rate for every purchase — e.g. 1 point for every set amount spent. Simple and transparent, but doesn't protect margins on low-margin items like raw gold and silver.  
+### **Category / Margin-Based**  
+- The rate depends on what's bought — high-margin items like finished pieces, diamonds, or pearls earn points; raw metal weight or labour, where margins are tight, earns none. Protects the business, but is more work to build.  
+### **Tier-Based Multiplier**  
+- The rate depends on the customer's tier — a Platinum customer might earn two or three times what a Regular customer earns for the same spend. Encourages bigger, consolidated purchases, but ties loyalty logic directly to sales logic.  
+## **Customer Management Overview**  
+<img width="1005" height="442" alt="image" src="https://github.com/user-attachments/assets/011da477-041c-4ed9-abf0-488300f95e78" />
+
+
+
