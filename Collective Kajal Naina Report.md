@@ -320,3 +320,32 @@ Both directions post as an adjustment against the batch's Balance Qty — the me
 |Create Opening Stock<br>Entry|**Yes**|**No**|**No**|**No**|  
 |View Opening Stock List|**Yes**|**Yes**|**Yes**|**Yes**|  
 |Edit / Delete Existing Entry|**Yes**|**No**|**No**|**No**|
+
+## **10. Stock Transfer**  
+  
+Stock Transfer is how stock physically moves between outlets. It sits on top of everything else already established — batch tracking, Pearl/Metal/Stone attributes, and multi-outlet support — and is the only event that moves stock, and its full batch history, from one warehouse to another.  
+## **What This Module Covers**  
+-  **Stock transfer between outlets** can be made.  
+## **How a Transfer Is Recorded**  
+### **Start a Transfer**  
+- Open Item Transfer Create from the Item Transfer List, which shows every transfer already made — From Outlet, To Outlet, Date, Status.  
+### **Select From Outlet and To Outlet**  
+- Choose the source warehouse the stock is currently in, and the destination it is being sent to.  
+### **Add Products & Select Batch**  
+- Search by SKU or name, then select the specific batch being moved — not just "10 units of this product," but the exact batch, since a batch carries its own attribute values and cost history that must travel with it.  
+### **Enter Quantity**  
+- Enter the quantity to move from that batch, and repeat for as many products or batches as the transfer includes.  
+### **Save**  
+- The transfer is recorded, and the item(s) are logged as moving from one outlet's inventory to the other's.  
+### **Item Transfer Detail**  
+- Every transfer has its own detail screen, showing the full record: items, batches, quantities, from/to outlets, and current status.  
+## **Stock Transfer Overview**  
+<img width="975" height="391" alt="image" src="https://github.com/user-attachments/assets/bd622970-f85f-4900-9930-6d76cc3f569c" />
+
+## **Role Overview**  
+  
+|**Action**|**Org Admin**|**Internal Finance**|**Store Manager**|**Sales Team**|  
+|---|---|---|---|---|  
+|View Transfers|**Yes**|**Yes**|**Yes**|**No**|  
+|Create / Edit Transfer|**Yes**|**Yes**|**Yes**|**No**|  
+|Confirm Receipt (if two-<br>step is adopted)|**Yes**|**Yes**|**Yes (own outlet**<br>**only)**|**No**|
